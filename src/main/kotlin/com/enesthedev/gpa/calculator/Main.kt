@@ -24,7 +24,7 @@ fun main(args: Array<String>) {
     println(currentLanguage["midterm"]?.format(lessonName))
     val midtermValue: String? = readLine()
 
-    if (midtermValue?.let { Helpers.isNumber(it) } == false) {
+    if (midtermValue?.let { Helpers.isNumber(it) } == false || midtermValue?.toInt()!! > 100) {
         println(currentLanguage["invalid"]?.format("not"))
         return;
     }
