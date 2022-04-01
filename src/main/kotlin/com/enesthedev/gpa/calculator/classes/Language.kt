@@ -12,7 +12,9 @@ class Language {
                 "lesson" to "Lütfen aldığınız dersin ismini/kodunu giriniz:",
                 "midterm" to "Lütfen %s dersinden aldığınız vize notunu giriniz:",
                 "invalid" to "Girdiğiniz %s geçersiz.",
-                "midterm.ratio" to "Lütfen %s dersinin yüzdelik etkisini giriniz (Boş bırakabilirsiniz Varsayılan değer 20):"
+                "visa" to "vize",
+                "final" to "final",
+                "ratio" to "Lütfen %s dersinin %s sınavının yüzdelik etkisini giriniz (Boş bırakabilirsiniz Varsayılan değer %d):"
             ),
             mapOf(
                 "welcome" to "en"
