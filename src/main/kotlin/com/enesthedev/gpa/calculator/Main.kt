@@ -35,4 +35,11 @@ fun main(args: Array<String>) {
     if ((midtermRatio !== null && midtermRatio.isEmpty()) || midtermRatio?.let { Helpers.isNumber(it) } == false) {
         midtermRatio = VISA_RATIO.toString();
     }
+
+    println(currentLanguage["ratio"]?.format(lessonName, currentLanguage["final"], 60))
+    var finalRatio: String? = readLine()
+
+    if ((finalRatio !== null && finalRatio.isEmpty()) || finalRatio?.let { Helpers.isNumber(it) } == false) {
+        finalRatio = FINAL_RATIO.toString();
+    }
 }
