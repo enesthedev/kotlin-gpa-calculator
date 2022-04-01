@@ -10,7 +10,7 @@ class Language {
             mapOf(
                 "welcome" to "Ders Not Ortalaması hesaplayıcıya hoşgeldiniz",
                 "lesson" to "Lütfen aldığınız dersin ismini/kodunu giriniz:",
-                "midterm" to "Lütfen %s dersinden aldığınız vize notunu giriniz:",
+                "grade" to "Lütfen %s dersinden aldığınız %s notunu giriniz:",
                 "invalid" to "Girdiğiniz %s geçersiz.",
                 "visa" to "vize",
                 "final" to "final",
