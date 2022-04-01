@@ -1,3 +1,3 @@
 
-rootProject.name = "kotlin-gano-calculator"
+rootProject.name = "kotlin-gpa-calculator"
 

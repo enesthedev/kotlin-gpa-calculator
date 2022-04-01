@@ -1,4 +1,4 @@
-import com.enesthedev.gano.calculator.constants.FALLBACK_LANGUAGE
+import com.enesthedev.gpa.calculator.constants.FALLBACK_LANGUAGE
 import java.util.*
 
 val languages = arrayOf("tr", "en")

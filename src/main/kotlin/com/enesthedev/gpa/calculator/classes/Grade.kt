@@ -1,4 +1,4 @@
-package com.enesthedev.gano.calculator.classes
+package com.enesthedev.gpa.calculator.classes
 
 class Grade {
     var value: Int = 0
