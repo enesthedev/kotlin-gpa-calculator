@@ -4,7 +4,10 @@ import java.util.*
 val languages = arrayOf("tr", "en")
 val keys = arrayOf(
     mapOf(
-        "welcome" to "Ders Not Ortalaması hesaplayıcıya hoşgeldiniz"
+        "welcome" to "Ders Not Ortalaması hesaplayıcıya hoşgeldiniz",
+        "lesson" to "Lütfen aldığınız dersin ismini/kodunu giriniz:",
+        "midterm" to "Lütfen %s dersinden aldığınız vize notunu giriniz:",
+        "invalid" to "Girdiğiniz %s geçersiz."
     ),
     mapOf(
         "welcome" to "en"
@@ -27,5 +30,25 @@ fun main(args: Array<String>) {
             // https://stackoverflow.com/questions/44038721/constants-in-kotlin-whats-a-recommended-way-to-create-them
             keys[languages.indexOf(FALLBACK_LANGUAGE)];
 
-    println(currentLanguage.get("welcome"))
+    println(currentLanguage.get("welcome"));
+    println(currentLanguage.get("lesson"));
+
+    val lessonName: String? = readLine();
+    if (lessonName == null || lessonName.isEmpty()) {
+        println(currentLanguage.get("invalid")?.format("ders ismi"))
+        return;
+    }
+
+    println(currentLanguage.get("midterm")?.format(lessonName))
+    val midtermValue: String? = readLine();
+    if (midtermValue == null || midtermValue.isEmpty()) {
+        println(currentLanguage.get("invalid")?.format("not"))
+        return;
+    }
+
+    if (!midtermValue.all { Character.isDigit(it) }) {
+        println(currentLanguage.get("invalid")?.format("not"))
+        return;
+    }
+
 }
