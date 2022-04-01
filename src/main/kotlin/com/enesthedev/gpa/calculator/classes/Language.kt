@@ -10,11 +10,14 @@ class Language {
             mapOf(
                 "welcome" to "Ders Not Ortalaması hesaplayıcıya hoşgeldiniz",
                 "lesson" to "Lütfen aldığınız dersin ismini/kodunu giriniz:",
+                "lesson.name" to "ders ismi",
                 "grade" to "Lütfen %s dersinden aldığınız %s notunu giriniz:",
                 "invalid" to "Girdiğiniz %s geçersiz.",
+                "note" to "not",
                 "visa" to "vize",
                 "final" to "final",
-                "ratio" to "Lütfen %s dersinin %s sınavının yüzdelik etkisini giriniz (Boş bırakabilirsiniz Varsayılan değer %d):"
+                "ratio" to "Lütfen %s dersinin %s sınavının yüzdelik etkisini giriniz (Boş bırakabilirsiniz Varsayılan değer %d):",
+                "result" to "%s Dersinden aldığınız notlar:\nVize: %s\nFinal: %s\nOrtalama: %s\nGeçme durumu: %s"
             ),
             mapOf(
                 "welcome" to "en"
@@ -29,15 +32,15 @@ class Language {
             return if (this.hasLanguage(languageKey))
                 this.keys[this.languages.indexOf(languageKey)]
             else
-                /**
-                 * FALLBACK_LANGUAGE
-                 * Sistem dilinin program dillerince desteklenmediği zamanda kullanılacak ana dil seçeneği
-                 * bu seçeneği oluştururken konfigre edilebilebilir static bir değer olması gerektiği için constants kullandım
-                 *
-                 * Kotlinde constans için alttaki adresden yararlandım.
-                 * https://stackoverflow.com/questions/44038721/constants-in-kotlin-whats-a-recommended-way-to-create-them
-                 */
-                this.keys[this.languages.indexOf(FALLBACK_LANGUAGE)];
+            /**
+             * FALLBACK_LANGUAGE
+             * Sistem dilinin program dillerince desteklenmediği zamanda kullanılacak ana dil seçeneği
+             * bu seçeneği oluştururken konfigre edilebilebilir static bir değer olması gerektiği için constants kullandım
+             *
+             * Kotlinde constans için alttaki adresden yararlandım.
+             * https://stackoverflow.com/questions/44038721/constants-in-kotlin-whats-a-recommended-way-to-create-them
+             */
+                this.keys[this.languages.indexOf(FALLBACK_LANGUAGE)]
         }
     }
 }
