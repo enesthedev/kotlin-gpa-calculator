@@ -59,7 +59,7 @@ fun main(args: Array<String>) {
     println(currentLanguage["ratio"]?.format(
         lessonName,
         currentLanguage["final"],
-        60
+        FINAL_RATIO
     ))
     var finalRatio: String? = readLine()
 
