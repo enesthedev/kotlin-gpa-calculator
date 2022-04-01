@@ -1,5 +1,5 @@
-import com.enesthedev.gpa.calculator.classes.Helpers
-import com.enesthedev.gpa.calculator.classes.Language
+import com.enesthedev.gpa.calculator.classes.*
+import com.enesthedev.gpa.calculator.constants.*
 import java.util.*
 
 fun main(args: Array<String>) {
@@ -29,10 +29,10 @@ fun main(args: Array<String>) {
         return;
     }
 
-    println(currentLanguage["midterm.ratio"]?.format(lessonName))
+    println(currentLanguage["ratio"]?.format(lessonName, currentLanguage["visa"], VISA_RATIO))
     var midtermRatio: String? = readLine()
 
     if ((midtermRatio !== null && midtermRatio.isEmpty()) || midtermRatio?.let { Helpers.isNumber(it) } == false) {
-        midtermRatio = "20";
+        midtermRatio = VISA_RATIO.toString();
     }
 }
