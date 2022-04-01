@@ -2,7 +2,7 @@ package com.enesthedev.gano.calculator.classes
 
 class Grade {
     var value: Int = 0
-    var ratio: Double = 0
+    var ratio: Double = 0.0
 
     /**
      * Not sınıfı
