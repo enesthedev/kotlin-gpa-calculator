@@ -11,7 +11,8 @@ class Language {
                 "welcome" to "Ders Not Ortalaması hesaplayıcıya hoşgeldiniz",
                 "lesson" to "Lütfen aldığınız dersin ismini/kodunu giriniz:",
                 "midterm" to "Lütfen %s dersinden aldığınız vize notunu giriniz:",
-                "invalid" to "Girdiğiniz %s geçersiz."
+                "invalid" to "Girdiğiniz %s geçersiz.",
+                "midterm.ratio" to "Lütfen %s dersinin yüzdelik etkisini giriniz (Boş bırakabilirsiniz Varsayılan değer 20):"
             ),
             mapOf(
                 "welcome" to "en"
