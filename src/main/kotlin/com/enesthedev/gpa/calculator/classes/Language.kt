@@ -24,13 +24,17 @@ class Language {
 
         fun getKeyMapOfLanguage(languageKey: String): Map<String, String> {
             return if (this.hasLanguage(languageKey))
-                this.keys.get(
-                    this.languages.indexOf(languageKey)
-                )
+                this.keys[this.languages.indexOf(languageKey)]
             else
-                this.keys.get(
-                    this.languages.indexOf(FALLBACK_LANGUAGE)
-                );
+                /**
+                 * FALLBACK_LANGUAGE
+                 * Sistem dilinin program dillerince desteklenmediği zamanda kullanılacak ana dil seçeneği
+                 * bu seçeneği oluştururken konfigre edilebilebilir static bir değer olması gerektiği için constants kullandım
+                 *
+                 * Kotlinde constans için alttaki adresden yararlandım.
+                 * https://stackoverflow.com/questions/44038721/constants-in-kotlin-whats-a-recommended-way-to-create-them
+                 */
+                this.keys[this.languages.indexOf(FALLBACK_LANGUAGE)];
         }
     }
 }
