@@ -5,7 +5,7 @@ import com.enesthedev.gpa.calculator.constants.FALLBACK_LANGUAGE
 class Language {
     companion object {
         @JvmStatic
-        val languages: Array<String> = arrayOf("tr", "en")
+        val languages: Array<String> = arrayOf("ar", "en")
         val keys: Array<Map<String, String>> = arrayOf(
             mapOf(
                 "welcome" to "Ders Not Ortalaması hesaplayıcıya hoşgeldiniz",
@@ -17,10 +17,22 @@ class Language {
                 "visa" to "vize",
                 "final" to "final",
                 "ratio" to "Lütfen %s dersinin %s sınavının yüzdelik etkisini giriniz (Boş bırakabilirsiniz Varsayılan değer %d):",
-                "result" to "%s Dersinden aldığınız notlar:\nVize: %s\nFinal: %s\nOrtalama: %s\nGeçme durumu: %s"
+                "result" to "%s Dersinden aldığınız notlar:\nVize: %s\nFinal: %s\nOrtalama: %s\nGeçme durumu: %s",
+                "pass" to "Geçer",
+                "!pass" to "Geçmez",
             ),
             mapOf(
-                "welcome" to "en"
+                "welcome" to "Welcome the GPA Calculator",
+                "lesson" to "Please type course name/number:",
+                "lesson.name" to "crn number",
+                "grade" to "Please type youre %s lesson %s grade:",
+                "note" to "point",
+                "visa" to "midterm",
+                "final" to "final",
+                "ratio" to "Please type the percentage effect %s course of the %s: (Default value is %d)",
+                "result" to "Information about %s course:\nMidterm: %s\nFinal: %s\nAverage: %s\nState: %s",
+                "pass" to "Pass",
+                "!pass" to "Failed"
             ),
         )
 

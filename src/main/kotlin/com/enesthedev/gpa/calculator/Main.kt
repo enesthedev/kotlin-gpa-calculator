@@ -73,6 +73,6 @@ fun main(args: Array<String>) {
         midtermValue,
         finalValue,
         resultValue.toString(),
-        if (resultValue <= 50) "Geçmez" else "Geçer"
+        if (resultValue <= 50) currentLanguage["!pass"] else currentLanguage["pass"]
     ))
 }
