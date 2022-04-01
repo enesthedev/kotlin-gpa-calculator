@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
         return;
     }
 
-    println(currentLanguage["midterm"]?.format(lessonName))
+    println(currentLanguage["grade"]?.format(lessonName, currentLanguage["visa"]))
     val midtermValue: String? = readLine()
 
     if (midtermValue?.let { Helpers.isNumber(it) } == false || midtermValue?.toInt()!! > 100) {
@@ -34,6 +34,14 @@ fun main(args: Array<String>) {
 
     if ((midtermRatio !== null && midtermRatio.isEmpty()) || midtermRatio?.let { Helpers.isNumber(it) } == false) {
         midtermRatio = VISA_RATIO.toString();
+    }
+
+    println(currentLanguage["grade"]?.format(lessonName, currentLanguage["final"]))
+    val finalValue: String? = readLine()
+
+    if (finalValue?.let { Helpers.isNumber(it) } == false || finalValue?.toInt()!! > 100) {
+        println(currentLanguage["invalid"]?.format("not"))
+        return;
     }
 
     println(currentLanguage["ratio"]?.format(lessonName, currentLanguage["final"], 60))
